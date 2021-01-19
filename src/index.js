@@ -133,6 +133,7 @@ extend(qrcode.prototype,{
         // preload img
         var loadImage = function(url,callback){
             var img = new Image();
+            img.crossOrigin = 'Anonymous';
             img.src = url;
             img.onload = function () {
                 callback(this);
